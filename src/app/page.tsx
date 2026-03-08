@@ -44,7 +44,7 @@ export default async function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold tracking-[0.3em] uppercase text-navy-200">Newsletter</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight">
-            Read in five minutes. Shape decisions for longer.
+            Read in five minutes. Shape decisions that last.
           </h2>
           <p className="mt-4 text-base text-navy-100 leading-relaxed">
             The newsletter distills current work on organizational execution into concise memos. Each issue highlights one decision point,
