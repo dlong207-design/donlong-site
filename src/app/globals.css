@@ -1,26 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-inter: 'Inter', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --font-family-sans: var(--font-inter), system-ui, sans-serif;
+  --font-family-serif: var(--font-playfair), Georgia, serif;
+
+  --color-navy-50: #f0f4ff;
+  --color-navy-100: #e0e9ff;
+  --color-navy-200: #c7d6fe;
+  --color-navy-300: #a5b8fc;
+  --color-navy-400: #818cf8;
+  --color-navy-500: #6366f1;
+  --color-navy-600: #1e3a5f;
+  --color-navy-700: #1a2f4e;
+  --color-navy-800: #162540;
+  --color-navy-900: #0f1a2e;
+  --color-navy-950: #0a1120;
+
+  --color-sage-50: #f0f4f0;
+  --color-sage-100: #dce8dc;
+  --color-sage-200: #bdd4bd;
+  --color-sage-300: #96ba96;
+  --color-sage-400: #6a9e6a;
+  --color-sage-500: #4a8050;
+  --color-sage-600: #3a6640;
+  --color-sage-700: #2e5033;
+  --color-sage-800: #243d28;
+  --color-sage-900: #1a2e1e;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #fafafa;
+    color: #1e293b;
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  ::selection {
+    background-color: #1e3a5f;
+    color: white;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .prose-editorial {
+    @apply prose prose-slate max-w-none;
+    @apply prose-headings:tracking-tight;
+    @apply prose-p:leading-relaxed prose-p:text-slate-600;
+    @apply prose-strong:text-slate-900;
+    @apply prose-li:text-slate-600;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-narrow {
+    @apply max-w-3xl mx-auto;
+  }
+
+  .container-wide {
+    @apply max-w-6xl mx-auto;
+  }
 }

@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The 5-Minute Manager
 
-## Getting Started
+A production-ready Next.js site for The 5-Minute Manager—a leadership newsletter and professional portfolio by Don Long.
 
-First, run the development server:
+## Quick Start
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Installation
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── layout.tsx          # Root layout with Navigation + Footer
+│   ├── page.tsx            # Homepage
+│   ├── articles/
+│   │   ├── page.tsx        # Articles archive
+│   │   └── [slug]/page.tsx # Individual article pages
+│   ├── about/page.tsx      # About page
+│   ├── subscribe/page.tsx  # Subscribe page
+│   └── api/subscribe/      # Newsletter signup API
+├── components/
+│   ├── layout/             # Navigation, Footer
+│   ├── articles/           # Article card components
+│   ├── mdx/                # MDX custom components
+│   └── newsletter/         # Newsletter signup form
+├── content/
+│   └── articles/           # MDX article files
+└── lib/
+    ├── articles.ts          # Article parsing utilities
+    └── newsletter/          # Newsletter provider adapters
+```
 
-## Learn More
+## Adding New Articles
 
-To learn more about Next.js, take a look at the following resources:
+Create a new `.mdx` file in `src/content/articles/`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```mdx
+---
+title: "Your Article Title"
+date: "2025-03-01"
+excerpt: "A one or two sentence summary."
+tags: ["Leadership", "Management Systems"]
+featured: false
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Article content here...
+```
 
-## Deploy on Vercel
+### Available MDX Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```mdx
+<Callout type="insight">Key insight text.</Callout>
+<PullQuote attribution="Optional">A memorable quote.</PullQuote>
+<Divider />
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Newsletter Integration
+
+By default the form uses a placeholder adapter. To connect Beehiiv:
+
+1. Copy `.env.example` to `.env.local`
+2. Fill in values:
+
+```env
+NEWSLETTER_PROVIDER=beehiiv
+BEEHIIV_API_KEY=your_key_here
+BEEHIIV_PUBLICATION_ID=your_pub_id_here
+```
+
+## Deployment to Vercel
+
+1. Push to GitHub
+2. Import in [Vercel](https://vercel.com)
+3. Set environment variables in Vercel dashboard
+4. Deploy

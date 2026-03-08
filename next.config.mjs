@@ -1,9 +1,8 @@
 import createMDX from '@next/mdx'
-import remarkFrontmatter from 'remark-frontmatter'
 
 const withMDX = createMDX({
   options: {
-    remarkPlugins: [remarkFrontmatter],
+    remarkPlugins: [],
     rehypePlugins: [],
   },
 })
