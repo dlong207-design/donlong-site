@@ -1,10 +1,12 @@
+import Link from 'next/link'
+
 const topics = [
-  'Strategy Execution',
-  'Operational Leadership',
-  'Organizational Systems',
-  'Leadership Communication',
-  'Execution Risk',
-  'Decision Clarity',
+  { label: 'Strategy Execution', href: '/articles?tag=strategy-execution' },
+  { label: 'Operational Leadership', href: '/articles?tag=operational-leadership' },
+  { label: 'Organizational Systems', href: '/articles?tag=organizational-systems' },
+  { label: 'Leadership Communication', href: '/articles?tag=leadership-communication' },
+  { label: 'Execution Risk', href: '/articles?tag=execution-risk' },
+  { label: 'Decision Clarity', href: '/articles?tag=decision-clarity' },
 ]
 
 export default function Topics() {
@@ -16,12 +18,13 @@ export default function Topics() {
         </div>
         <div className="flex flex-wrap gap-3">
           {topics.map((topic) => (
-            <span
-              key={topic}
-              className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-sm font-medium text-slate-700"
+            <Link
+              key={topic.label}
+              href={topic.href}
+              className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-sm font-medium text-slate-700 hover:border-navy-200 hover:bg-navy-50 hover:text-navy-700 transition-colors"
             >
-              {topic}
-            </span>
+              {topic.label}
+            </Link>
           ))}
         </div>
       </div>
