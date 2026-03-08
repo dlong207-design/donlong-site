@@ -71,19 +71,20 @@ export default async function ArticlePage({ params }: Props) {
                 </span>
               ))}
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.1] tracking-tight mb-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.1] tracking-tight">
               {article.frontmatter.title}
             </h1>
-            <p className="text-slate-500 text-lg leading-relaxed mb-6 max-w-2xl">
-              {article.frontmatter.excerpt}
-            </p>
-            <div className="flex items-center gap-3 text-sm text-slate-400 pb-6 border-b border-slate-200">
+            <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
               <span>Don Long</span>
               <span>·</span>
               <time>{date}</time>
               <span>·</span>
               <span>{article.frontmatter.readingTime}</span>
             </div>
+            <p className="mt-6 text-slate-500 text-lg leading-relaxed max-w-2xl">
+              {article.frontmatter.excerpt}
+            </p>
+            <div className="mt-8 border-b border-slate-200" />
           </header>
 
           {/* Article Body */}
