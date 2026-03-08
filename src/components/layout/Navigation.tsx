@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/articles', label: 'Articles' },
+  { href: '/articles', label: 'Writing' },
   { href: '/about', label: 'About' },
   { href: '/subscribe', label: 'Subscribe' },
 ]
@@ -49,7 +49,7 @@ export default function Navigation() {
                 The 5-Minute Manager
               </span>
               <span className="block text-[10px] text-slate-500 leading-none mt-0.5 tracking-wide uppercase">
-                Leadership Insights
+                Execution · Leadership · Systems
               </span>
             </div>
           </Link>

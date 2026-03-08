@@ -4,25 +4,25 @@ import NewsletterSignup from '@/components/newsletter/NewsletterSignup'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Don Long writes The 5-Minute Manager, a leadership newsletter focused on the systems that help organizations translate strategy into consistent execution.',
+  description: 'Don Long is an operator focused on organizational execution, leadership systems, and operational clarity. This site is a portfolio of his thinking on strategy execution, program leadership, and organizational transformation.',
 }
 
 const credibilityMarkers = [
   {
     label: 'Focus Area',
-    value: 'Organizational Execution & Leadership Systems',
+    value: 'Strategy Execution · Operational Leadership · Organizational Systems',
+  },
+  {
+    label: 'Role Interests',
+    value: 'Program Leadership, Operations, Transformation, Organizational Excellence',
   },
   {
     label: 'Writing Approach',
-    value: 'Short, practical frameworks for working managers',
-  },
-  {
-    label: 'Publishing Cadence',
-    value: 'Regular articles and newsletter issues',
+    value: 'Structured analysis of real organizational dynamics',
   },
   {
     label: 'Audience',
-    value: 'Managers, directors, and organizational leaders',
+    value: 'Leaders, operators, and teams responsible for execution',
   },
 ]
 
@@ -40,49 +40,55 @@ export default function AboutPage() {
 
             <div className="space-y-5 text-slate-600 leading-relaxed">
               <p className="text-xl text-slate-700 leading-relaxed font-medium">
-                Don Long writes The 5-Minute Manager, a leadership newsletter focused on the
-                systems that help organizations translate strategy into consistent execution.
+                Don Long is an operator focused on organizational execution, leadership systems,
+                and the structures that determine whether strategic priorities actually get delivered.
               </p>
 
               <p>
-                His writing focuses on practical leadership challenges—the kind that show up in
-                real organizations, not in case studies. Accountability gaps. Cross-functional
-                friction. Execution that stalls between intent and outcome. The routines and
-                structures that make consistent performance possible.
+                His writing examines practical leadership challenges through the lens of organizational
+                pattern recognition—the kind that show up in real environments, not in case studies.
+                Accountability gaps. Cross-functional friction. Execution that stalls between intent
+                and outcome. The routines and structures that make consistent performance possible.
               </p>
 
               <p>
-                Every article is written for managers who are responsible for real decisions
-                and real outcomes. Not theory. Not frameworks for their own sake. Practical
-                thinking about how work actually gets done—and what leaders can do to make
-                it go better.
+                Every piece is written as structured analysis of real organizational dynamics—
+                grounded in the actual mechanics of how work gets done, and what leaders can do
+                to build more reliable execution systems.
               </p>
 
               <p>
-                The 5-Minute Manager started as a way to think clearly and publicly about
-                the organizational challenges that most managers recognize but rarely have
-                language for. It is a portfolio of how Don thinks about leadership,
-                execution, and what it takes to get teams to perform consistently.
+                The 5-Minute Manager is a thinking portfolio. It exists to make the analytical
+                approach visible: how Don diagnoses organizational problems, what patterns he
+                recognizes, and what practical frameworks he applies to improve execution
+                at every level of an organization.
               </p>
 
               <div className="my-8 p-6 bg-slate-50 border border-slate-200 rounded-xl">
                 <p className="text-sm text-slate-500 mb-3 font-semibold uppercase tracking-wider">
-                  For Hiring Leaders & Recruiters
+                  For Hiring Leaders &amp; Recruiters
                 </p>
                 <p className="text-slate-700 leading-relaxed">
                   This site is a portfolio of professional thinking. Each article reflects
-                  the author's perspective on leadership, organizational systems, and
-                  management practice. If you are evaluating leadership capability, this
-                  writing is designed to give you a clear view of how Don approaches
-                  organizational challenges—before a conversation even begins.
+                  how Don approaches leadership, organizational systems, and operational
+                  challenges. If you are evaluating candidates for roles involving strategy
+                  execution, program leadership, operational excellence, or organizational
+                  transformation—this writing is designed to give you a clear view of how
+                  he thinks before a conversation even begins.
+                </p>
+                <p className="text-slate-500 text-sm mt-3">
+                  Reach out at{' '}
+                  <a href="mailto:don@thesummitmark.com" className="text-navy-700 hover:text-navy-900 font-medium transition-colors">
+                    don@thesummitmark.com
+                  </a>{' '}
+                  or connect on LinkedIn below.
                 </p>
               </div>
 
               <p>
-                Don is based in the United States and has spent his career working in
-                complex, cross-functional organizational environments. His interests include
-                organizational design, leadership communication, and the practical mechanics
-                of getting teams to perform consistently at scale.
+                Don is based in the United States. His professional interests include
+                organizational design, leadership communication, execution risk, and the
+                practical mechanics of getting teams to perform consistently at scale.
               </p>
             </div>
 
@@ -98,17 +104,20 @@ export default function AboutPage() {
                 </svg>
                 Connect on LinkedIn
               </a>
-              <Link
-                href="/subscribe"
+              <a
+                href="mailto:don@thesummitmark.com"
                 className="inline-flex items-center gap-2 px-5 py-3 border border-slate-200 text-slate-700 text-sm font-semibold rounded-lg hover:border-navy-300 hover:text-navy-700 transition-colors"
               >
-                Subscribe to Newsletter
-              </Link>
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                don@thesummitmark.com
+              </a>
               <Link
                 href="/articles"
                 className="inline-flex items-center gap-2 px-5 py-3 border border-slate-200 text-slate-700 text-sm font-semibold rounded-lg hover:border-navy-300 hover:text-navy-700 transition-colors"
               >
-                Read the Articles
+                Read the Writing
               </Link>
             </div>
           </div>
@@ -132,7 +141,7 @@ export default function AboutPage() {
             <div className="bg-navy-700 text-white rounded-2xl p-7">
               <h3 className="font-bold text-white mb-2">Subscribe to the Newsletter</h3>
               <p className="text-navy-200 text-sm mb-5 leading-relaxed">
-                Get new leadership insights from The 5-Minute Manager in your inbox.
+                Receive new analysis from The 5-Minute Manager on leadership, execution, and organizational systems.
               </p>
               <NewsletterSignup variant="footer" />
             </div>

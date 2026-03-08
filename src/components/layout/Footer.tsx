@@ -14,11 +14,12 @@ export default function Footer() {
               Newsletter
             </p>
             <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">
-              Get new insights in your inbox
+              Get new analysis in your inbox
             </h3>
             <p className="text-slate-400 mb-6 leading-relaxed">
-              Subscribe to The 5-Minute Manager. Each issue delivers one practical leadership idea
-              in about five minutes.
+              Subscribe to The 5-Minute Manager. Each issue examines a specific leadership,
+              execution, or organizational challenge—written for readers who work on complex
+              organizational problems.
             </p>
             <NewsletterSignup variant="footer" />
           </div>
@@ -38,6 +39,12 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-4">
             <a
+              href="mailto:don@thesummitmark.com"
+              className="text-slate-400 hover:text-white transition-colors text-sm"
+            >
+              Contact
+            </a>
+            <a
               href="https://www.linkedin.com/in/summitmark/"
               target="_blank"
               rel="noopener noreferrer"
@@ -49,7 +56,7 @@ export default function Footer() {
               LinkedIn
             </a>
             <Link href="/articles" className="text-slate-400 hover:text-white transition-colors text-sm">
-              Articles
+              Writing
             </Link>
             <Link href="/about" className="text-slate-400 hover:text-white transition-colors text-sm">
               About

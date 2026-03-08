@@ -3,8 +3,8 @@ import { getAllArticles } from '@/lib/articles'
 import ArticleCard from '@/components/articles/ArticleCard'
 
 export const metadata: Metadata = {
-  title: 'Articles',
-  description: 'All leadership insights from The 5-Minute Manager, sorted newest first.',
+  title: 'Writing',
+  description: 'Analysis of leadership, strategy execution, and organizational systems by Don Long.',
 }
 
 export default function ArticlesPage() {
@@ -16,11 +16,11 @@ export default function ArticlesPage() {
         <div className="mb-12">
           <p className="text-xs font-semibold tracking-widest uppercase text-navy-600 mb-3">Archive</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-4">
-            All Articles
+            All Writing
           </h1>
           <p className="text-slate-500 max-w-xl leading-relaxed">
-            Short, practical frameworks on leadership, execution, and organizational systems.
-            New articles published regularly.
+            Structured analysis of leadership, execution, and organizational systems.
+            Each piece examines a specific pattern or dynamic in how organizations actually work.
           </p>
         </div>
 

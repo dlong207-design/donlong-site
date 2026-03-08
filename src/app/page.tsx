@@ -8,37 +8,31 @@ const themes = [
     title: 'Organizational Execution',
     description: 'How strategy becomes real output—and what breaks down in between.',
     href: '/articles?tag=organizational-execution',
-    icon: '⚙️',
   },
   {
     title: 'Accountability Systems',
     description: 'Building the structures that make follow-through predictable rather than exceptional.',
     href: '/articles?tag=accountability',
-    icon: '🎯',
   },
   {
     title: 'Cross-Functional Alignment',
     description: 'How leaders create clarity across teams with different languages and incentives.',
     href: '/articles?tag=alignment',
-    icon: '🔗',
   },
   {
     title: 'Leadership Communication',
     description: 'Communicating with precision and confidence at every level of an organization.',
     href: '/articles?tag=communication',
-    icon: '📣',
   },
   {
     title: 'Operational Discipline',
     description: 'The routines, rituals, and review mechanisms that sustain execution over time.',
     href: '/articles?tag=operations',
-    icon: '📐',
   },
   {
     title: 'Team Performance',
     description: 'How managers build teams that perform consistently—not just in sprints.',
     href: '/articles?tag=performance',
-    icon: '📈',
   },
 ]
 
@@ -68,37 +62,34 @@ export default async function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-gradient-to-b from-slate-900 via-navy-900 to-navy-800 text-white pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      <section className="relative bg-gradient-to-b from-slate-900 via-navy-900 to-navy-800 text-white pt-36 pb-28 lg:pt-52 lg:pb-40 overflow-hidden">
         {/* Subtle grid background */}
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
           backgroundSize: '60px 60px'
         }} />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 bg-white/10 rounded-full text-xs font-medium text-slate-300 border border-white/10">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 mb-8 px-3 py-1.5 bg-white/10 rounded-full text-xs font-medium text-slate-300 border border-white/10">
               <span className="w-1.5 h-1.5 rounded-full bg-sage-400 animate-pulse" />
-              Leadership Insights for Working Managers
+              Strategy Execution · Operational Leadership · Organizational Systems
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6">
-              Practical leadership frameworks for managers responsible for real execution.
+            <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold leading-[1.1] tracking-tight mb-8">
+              Systems for turning strategy into execution.
             </h1>
-            <p className="text-slate-300 text-lg lg:text-xl leading-relaxed mb-4 max-w-2xl">
-              The 5-Minute Manager explores the systems behind effective leadership. Each article
-              breaks down practical ideas that help managers translate strategy into consistent
-              execution. This site is a collection of short frameworks and insights drawn from
-              real organizational experience.
+            <p className="text-slate-300 text-lg lg:text-xl leading-relaxed mb-6">
+              I write about the operational systems, leadership behaviors, and organizational
+              dynamics that determine whether strategic priorities actually get delivered.
             </p>
-            <p className="text-slate-500 text-sm mb-10 max-w-xl border-l-2 border-slate-600 pl-3">
-              For recruiters and hiring leaders: this site is a portfolio of how I think about
-              leadership, execution, and organizational effectiveness.
+            <p className="text-slate-400 text-sm font-medium mb-12">
+              Operator focused on organizational execution, leadership systems, and operational clarity.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 href="/articles"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-navy-900 font-semibold text-sm rounded-lg hover:bg-slate-100 transition-all duration-150"
               >
-                Explore Recent Insights
+                Read the Writing
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -107,30 +98,32 @@ export default async function HomePage() {
                 href="/subscribe"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 text-white font-semibold text-sm rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-150"
               >
-                Subscribe to Newsletter
+                Subscribe
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Leadership Themes */}
+      {/* Thinking Themes */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <p className="text-xs font-semibold tracking-widest uppercase text-navy-600 mb-3">Areas of Focus</p>
+            <p className="text-xs font-semibold tracking-widest uppercase text-navy-600 mb-3">Thinking Themes</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight max-w-xl">
-              Six themes at the core of leadership execution
+              Six dimensions of organizational execution
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {themes.map((theme) => (
+            {themes.map((theme, i) => (
               <Link
                 key={theme.title}
                 href={theme.href}
                 className="group block bg-slate-50 border border-slate-200 rounded-xl p-6 hover:border-navy-200 hover:bg-navy-50 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
               >
-                <div className="text-2xl mb-3">{theme.icon}</div>
+                <div className="text-xs font-bold text-slate-300 mb-3 font-mono tracking-widest">
+                  {String(i + 1).padStart(2, '0')}
+                </div>
                 <h3 className="font-bold text-slate-900 mb-2 group-hover:text-navy-700 transition-colors">
                   {theme.title}
                 </h3>
@@ -145,7 +138,7 @@ export default async function HomePage() {
       <section className="py-20 lg:py-28 bg-slate-900 text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <p className="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-3">Why It Matters</p>
+            <p className="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-3">Perspective</p>
             <h2 className="text-3xl lg:text-4xl font-bold tracking-tight max-w-xl">
               Grounded in real organizational practice
             </h2>
@@ -164,21 +157,21 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Featured Articles */}
+      {/* Featured Analysis */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
             <div>
-              <p className="text-xs font-semibold tracking-widest uppercase text-navy-600 mb-3">Selected Insights</p>
+              <p className="text-xs font-semibold tracking-widest uppercase text-navy-600 mb-3">Featured Analysis</p>
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
-                On Leadership Execution
+                On Strategy, Execution, and Leadership
               </h2>
             </div>
             <Link
               href="/articles"
               className="text-sm font-semibold text-navy-700 hover:text-navy-900 flex items-center gap-1.5 group transition-colors whitespace-nowrap"
             >
-              View All Articles
+              View All Writing
               <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -200,19 +193,19 @@ export default async function HomePage() {
       <section className="py-20 lg:py-28 bg-slate-50 border-t border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold tracking-widest uppercase text-navy-600 mb-3">About</p>
+            <p className="text-xs font-semibold tracking-widest uppercase text-navy-600 mb-3">About the Author</p>
             <h2 className="text-3xl font-bold text-slate-900 tracking-tight mb-4">
               Don Long
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Don Long writes The 5-Minute Manager, a leadership newsletter focused on the systems
-              that help organizations translate strategy into consistent execution. His writing
-              draws on direct experience with the organizational challenges managers encounter
-              when moving from clear intention to reliable output.
+              Don Long writes about the organizational systems, leadership behaviors, and operational
+              structures that determine whether strategic priorities actually get delivered. His writing
+              draws on direct experience with the challenges organizations face when moving from intent
+              to consistent, accountable execution.
             </p>
             <p className="text-slate-600 leading-relaxed mb-6">
-              Each article is a short, practical framework designed for managers who are
-              responsible for real decisions and real outcomes.
+              This site is a portfolio of structured thinking on leadership, strategy execution, and
+              operational clarity—written for readers working on complex organizational problems.
             </p>
             <Link
               href="/about"
@@ -227,6 +220,45 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* For Recruiters and Hiring Leaders */}
+      <section className="py-16 lg:py-20 bg-white border-t border-slate-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-xl">
+            <p className="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-5">For Recruiters &amp; Hiring Leaders</p>
+            <p className="text-slate-700 leading-relaxed mb-3">
+              This site is a collection of how I think about leadership, execution, and operational systems.
+            </p>
+            <p className="text-slate-500 leading-relaxed mb-7 text-sm">
+              If you&apos;re hiring for roles involving strategy execution, program leadership, operational
+              excellence, or organizational transformation, this site reflects the way I approach
+              organizational problems.
+            </p>
+            <div className="flex flex-wrap gap-5">
+              <a
+                href="mailto:don@thesummitmark.com"
+                className="inline-flex items-center gap-2 text-sm font-medium text-navy-700 hover:text-navy-900 transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                don@thesummitmark.com
+              </a>
+              <a
+                href="https://www.linkedin.com/in/summitmark/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-navy-700 hover:text-navy-900 transition-colors"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter */}
       <section className="py-20 lg:py-28 bg-navy-700 text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -236,9 +268,9 @@ export default async function HomePage() {
               Read in five minutes. Think longer.
             </h2>
             <p className="text-navy-200 leading-relaxed mb-8">
-              Subscribe to receive new leadership insights from The 5-Minute Manager. Each issue
-              delivers a short, practical idea about leadership and organizational execution that
-              can be read in about five minutes.
+              Subscribe to receive new analysis from The 5-Minute Manager. Each issue examines a
+              specific leadership, execution, or organizational challenge—written for readers who
+              work on complex organizational problems.
             </p>
             <NewsletterSignup variant="footer" />
           </div>
