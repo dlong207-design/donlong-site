@@ -40,28 +40,32 @@ export default function AboutPage() {
 
             <div className="space-y-5 text-slate-600 leading-relaxed">
               <p className="text-xl text-slate-700 leading-relaxed font-medium">
-                Don Long is an operator focused on organizational execution, leadership systems,
-                and the structures that determine whether strategic priorities actually get delivered.
+                Leadership thinking on strategy execution, organizational systems, and operational clarity.
+              </p>
+
+              <p>
+                Writes about organizational execution, leadership systems, and the structures that determine
+                whether strategic priorities actually get delivered.
               </p>
 
               <p>
                 His writing examines practical leadership challenges through the lens of organizational
-                pattern recognition—the kind that show up in real environments, not in case studies.
-                Accountability gaps. Cross-functional friction. Execution that stalls between intent
-                and outcome. The routines and structures that make consistent performance possible.
+                pattern recognition. These are the patterns that appear in real working environments, not
+                in case studies. Accountability gaps. Cross-functional friction. Execution that stalls between
+                intent and outcome. The routines and structures that make consistent performance possible.
               </p>
 
               <p>
-                Every piece is written as structured analysis of real organizational dynamics—
-                grounded in the actual mechanics of how work gets done, and what leaders can do
-                to build more reliable execution systems.
+                Each piece analyzes real organizational dynamics and focuses on the practical mechanics of how
+                work actually gets done. The goal is to identify patterns leaders can use to build stronger,
+                more reliable execution systems.
               </p>
 
               <p>
-                The 5-Minute Manager is a thinking portfolio. It exists to make the analytical
-                approach visible: how Don diagnoses organizational problems, what patterns he
-                recognizes, and what practical frameworks he applies to improve execution
-                at every level of an organization.
+                The 5-Minute Manager is a portfolio of leadership thinking. The site exists to make the
+                analytical approach visible. It shows how organizational problems are diagnosed, what patterns
+                appear across teams and systems, and what practical frameworks can improve execution across
+                organizations.
               </p>
 
               <div className="my-8 p-6 bg-slate-50 border border-slate-200 rounded-xl">
@@ -69,12 +73,11 @@ export default function AboutPage() {
                   For Hiring Leaders &amp; Recruiters
                 </p>
                 <p className="text-slate-700 leading-relaxed">
-                  This site is a portfolio of professional thinking. Each article reflects
-                  how Don approaches leadership, organizational systems, and operational
-                  challenges. If you are evaluating candidates for roles involving strategy
-                  execution, program leadership, operational excellence, or organizational
-                  transformation—this writing is designed to give you a clear view of how
-                  he thinks before a conversation even begins.
+                  This site is a portfolio of professional thinking. Each article reflects how leadership,
+                  organizational systems, and operational challenges are approached. If you are evaluating
+                  candidates for roles involving strategy execution, program leadership, operational
+                  excellence, or organizational transformation, these essays are designed to give you a
+                  clear view of how the problems are analyzed before a conversation even begins.
                 </p>
                 <p className="text-slate-500 text-sm mt-3">
                   Reach out at{' '}
@@ -86,9 +89,9 @@ export default function AboutPage() {
               </div>
 
               <p>
-                Don is based in the United States. His professional interests include
-                organizational design, leadership communication, execution risk, and the
-                practical mechanics of getting teams to perform consistently at scale.
+                Based in the United States. Professional interests include organizational design, leadership
+                communication, execution risk, and the practical mechanics of helping teams perform
+                consistently at scale.
               </p>
             </div>
 
